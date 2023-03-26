@@ -10,6 +10,7 @@
 
 ## Brief singkat mengenai project
 - project dikerjakan menggunakan React JS
+- responsive
 
 ## library yang digunakan
 - @redux/toolkit : untuk keperluan configure store, karena bawaan createstore dari redux depricated
