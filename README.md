@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+# Jakmall Frontend Test
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## demo
+[https://tes-jakmall.vercel.app](https://tes-jakmall.vercel.app)
 
-## Available Scripts
+## atau bisa juga :
+- clone project
+- npm install
+- npm start
 
-In the project directory, you can run:
+## Brief singkat mengenai project
 
-### `npm start`
+## library yang digunakan
+- @redux/toolkit : untuk keperluan configure store, karena bawaan createstore dari redux depricated
+- react-hook-form : untuk form input
+- react-redux : agar redux bisa digunakan pada react
+- redux : global state management
+- redux-persist : unruk menyimpan nilai yang diinput pada redux state, sehingga jika di refresh data tidak hilang
+- styled-components : untuk membantu styling component
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## di step payment 1
+- state form pertama kosong dan validasi juga clear, ketika diisi validasi akan dilakukan tiap user input (onchange)
+- saat validasi clear border input warna abu abu, jika benar hijau, dan jika salah oranye, disertakan juga ikon check saat valid, dan silang saat saat input salah, dilengkapi juga dengan error message untuk memudahkan user dalam pengisisan ketika field yg fiisi masih salah
+- pada field phone dibuat fungsi untuk filter key, sehingga hanya char numerik dan 0-9,-,+,(,) yang dapat diinput, jika ketik diluar char tersebut tidak akan ada perubahan pada input field (preventdefault)
+- dropship default ada di false, jika dicheck, maka field dropship name dan phone wajib diisi, jika di uncheck lagi akan reset field tersebut dan jadi disabled
+- tombol continue payment jika di klik tapi validasi form masih belum benar, maka tidak akan lanjut ke step berikutnya
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## step payment 2
+- state awal pada step ini pada pilihan shipping dan payment masih kosong, jika dipilih salah 1 maka akan di highlight hijau dan merubah value pada komponen summary
+- jika pilihan shipping dan payment belum dipilih atau hanya salah satu dipilih, tombol pay masih akan disabled, jika sudah dipilih semua bisa lanjut di klik pembayaran
 
-### `npm test`
+## di step payment 3 (selesai)
+- page akan langsung memberikan pesan thankyou disertai transaction id dengan random alfanumber 5 digit selain char ,I,0,O
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
