@@ -1,0 +1,6 @@
+export const SAVE_FORM_DATA = "SAVE_FORM_DATA";
+export const RESET_STATE = "RESET_STATE";
+export const CHANGE_STEP = "CHANGE_STEP";
+export const CHANGE_IS_DROPSHIP = "CHANGE_IS_DROPSHIP";
+export const SELECT_SHIPMENT = "SELECT_SHIPMENT";
+export const SELECT_PAYMENT = "SELECT_PAYMENT";

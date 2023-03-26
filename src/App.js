@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Main from "./components/Main";
+import styled from "styled-components";
+import { devices } from "./components/mediaQuery";
+
+const StyledDiv = styled.div` 
+    background-color: var(--light-orange-bg);
+    height: 100vh;
+    position: relative;
+
+    @media ${devices.tablet} {
+      background-color: #fff;
+    }
+`;
 
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <StyledDiv>
+        <Main />
+      </StyledDiv>
   );
 }
 
