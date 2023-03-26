@@ -1,3 +1,25 @@
+:root {
+  --white: #FFF;
+  --light-orange-bg: #FFFAE6;
+  --orange: #FF8A00;
+  --light-orange-02: rgba(255, 138, 0, 0.2);
+  --light-orange-04: rgba(255, 138, 0, 0.4);
+  --green: #1BD97B;
+  --transparent-green: rgba(27, 217, 123, 0.2);
+  --red-error: #ff0000c5;
+  --dark-grey: #333;
+  --grey: #999;
+  --light-grey: #CCC;
+  --input-disabled: #EEE;
+  --title-shadow: #F2F2F2;
+  --summary-ship-pay-border: #C0C0C0;
+}
+
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +32,34 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+input[type="checkbox"] {
+  margin-right: 8px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  position: relative;
+  display: inline-block;
+}
+input[type="checkbox"]:checked {
+  background-color: var(--white);
+  border: 1px solid var(--green);
+}
+input[type="checkbox"]:checked::after {
+  content: "\2714";
+  font-size: 20px;
+  color: var(--green);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
