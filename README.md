@@ -9,6 +9,7 @@
 - npm start
 
 ## Brief singkat mengenai project
+- project dikerjakan menggunakan React JS
 
 ## library yang digunakan
 - @redux/toolkit : untuk keperluan configure store, karena bawaan createstore dari redux depricated
